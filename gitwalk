@@ -7,7 +7,10 @@ index = int(sys.argv[2])
 # git checkout branch
 os.system("git checkout " + branch)
 
-# git log > stdin
-git_log = subprocess.check_output(["git", "log"])
-print("output=")
-print(git_log)
+# collect full list of commits
+git_log = "\n"+str(subprocess.check_output(["git", "log"]), "utf-8")
+git_commits = git_log.split("\ncommit ")[1:]
+git_commits = [commit.split("\n")[0] for commit in git_commits]
+
+# check out index'th commit
+os.system("git checkout " + git_commits[index])
