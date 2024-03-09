@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+
+import os, sys, subprocess
+branch = sys.argv[1]
+index = int(sys.argv[2])
+
+# git checkout branch
+os.system("git checkout " + branch)
+
+# git log > stdin
+git_log = subprocess.check_output(["git", "log"])
+print("output=")
+print(git_log)
