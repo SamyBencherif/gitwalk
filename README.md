@@ -1,6 +1,6 @@
 # GitWalk
 
-Let's go for a walk, through the history of an open source project.
+Let's go for a walk through the history of an open source project.
 
 GitWalk allows you to explore the history of a git repository and watch it unfold the same way the original developers did.
 
