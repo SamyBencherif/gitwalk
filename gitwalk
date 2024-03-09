@@ -13,4 +13,4 @@ git_commits = git_log.split("\ncommit ")[1:]
 git_commits = [commit.split("\n")[0] for commit in git_commits]
 
 # check out index'th commit
-os.system("git checkout " + git_commits[index])
+os.system("git checkout " + git_commits[::-1][index])
