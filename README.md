@@ -15,3 +15,8 @@ gitwalk [branch] [index]
 3. use `gitwalk main 1` to checkout the second commit on the main branch
 4. and so on...
 
+## Installation
+
+```
+cp gitwalk /usr/local/bin
+```
